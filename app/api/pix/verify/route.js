@@ -1,16 +1,15 @@
-import { stripe } from "@/lib/stripe";
+import { mp } from "@/lib/mercadoPago";
+import { Payment } from "mercadopago";
 
 export async function POST(req) {
-  const { paymentIntentId } = await req.json();
-
   try {
-    const paymentIntent = await stripe.paymentIntents.retrieve(paymentIntentId);
+    const { id } = await req.json();
+
+    const payment = await new Payment(mp).get({ id });
 
     return Response.json({
-      status: paymentIntent.status,
-      paymentMethod: paymentIntent.paymentMethod, // confirma que foi PIX
-      amount: paymentIntent.amount,
-      confirmed: paymentIntent.status === "succeeded",
+      status: payment.status,
+      detail: payment.status_detail,
     });
   } catch (error) {
     return Response.json({ error: error.message }, { status: 400 });

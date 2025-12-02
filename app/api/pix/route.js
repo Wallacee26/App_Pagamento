@@ -1,32 +1,24 @@
-import { stripe } from "@/lib/stripe";
+import { mp } from "@/lib/mercadoPago";
+import { Payment } from "mercadopago";
 
 export async function POST(req) {
-  const { amount, customerName } = await req.json();
-
   try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: Number(amount) * 100,
-      currency: "brl",
+    const { amount, description } = await req.json();
 
-      // Stripe v20 – não use payment_method_types
-      paymentMethodConfiguration: "pmc_PIX",
-
-      metadata: {
-        customerName,
-      },
+    const payment = await new Payment(mp).create({
+      transaction_amount: Number(amount),
+      description: description || "Pagamento PIX",
+      payment_method_id: "pix",
     });
-
-    // Stripe v20 – nextAction mudou
-    const pixInfo = paymentIntent.nextAction?.pixDisplayQrCode;
 
     return Response.json({
-      paymentIntentId: paymentIntent.id,
-      clientSecret: paymentIntent.client_secret,
-      qrCode: pixInfo?.imageUrlPng,
-      qrCodeText: pixInfo?.qrCode,
-      expiresAt: paymentIntent.expiresAt,
+      id: payment.id,
+      status: payment.status,
+      qrCode: payment.point_of_interaction.transaction_data.qr_code,
+      qrCodeBase64:
+        payment.point_of_interaction.transaction_data.qr_code_base64,
     });
-  } catch (err) {
-    return Response.json({ error: err.message }, { status: 400 });
+  } catch (error) {
+    return Response.json({ error: error.message }, { status: 400 });
   }
 }
