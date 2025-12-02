@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "form-data": "^4.0.5",
+    "fs-extra": "^11.3.2",
     "mercadopago": "^2.11.0",
     "next": "15.5.6",
     "pdfkit": "^0.17.2",
