@@ -1,28 +1,23 @@
-{
+﻿{
   "name": "app_pagamento",
   "version": "0.1.0",
   "private": true,
-  {
-    "name": "app_pagamento",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-      "dev": "node --no-deprecation node_modules/next/dist/bin/next dev --turbopack",
-      "build": "next build --turbopack",
-      "start": "next start"
-    },
-    "dependencies": {
-      "mercadopago": "^2.11.0",
-      "next": "15.5.6",
-      "pdfkit": "^0.17.2",
-      "qrcode": "^1.5.4",
-      "react": "19.1.0",
-      "react-dom": "19.1.0",
-      "stripe": "^20.0.0"
-    },
-    "devDependencies": {
-      "@tailwindcss/postcss": "^4",
-      "tailwindcss": "^4"
-    }
+  "scripts": {
+    "dev": "node --no-deprecation node_modules/next/dist/bin/next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start"
+  },
+  "dependencies": {
+    "mercadopago": "^2.11.0",
+    "next": "15.5.6",
+    "pdfkit": "^0.17.2",
+    "qrcode": "^1.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "stripe": "^20.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4"
   }
-        "stripe": "^20.0.0"
+}
