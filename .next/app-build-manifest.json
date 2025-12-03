@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "pages": {
     "/_not-found/page": [
       "static/chunks/41b88_next_dist_15ac1959._.js",
@@ -53,7 +52,5 @@
       "static/chunks/turbopack-App_Pagamento_785535b0._.js"
     ]
   }
-=======
   "pages": {}
->>>>>>> 0c51adc8ff42add2bdaa080d71f9fd8e50d31331
 }
