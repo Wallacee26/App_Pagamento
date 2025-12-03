@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "/_not-found/page": "app/_not-found/page.js",
   "/pagamento_gerado/page": "app/pagamento_gerado/page.js",
   "/page": "app/page.js"
+=======
+  "/api/pix/route": "app/api/pix/route.js"
+>>>>>>> 0c51adc8ff42add2bdaa080d71f9fd8e50d31331
 }

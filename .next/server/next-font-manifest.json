@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "app": {
     "[project]/App_Pagamento/app/_not-found/page": [
       "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
@@ -14,6 +15,10 @@
     ]
   },
   "appUsingSizeAdjust": true,
+=======
+  "app": {},
+  "appUsingSizeAdjust": false,
+>>>>>>> 0c51adc8ff42add2bdaa080d71f9fd8e50d31331
   "pages": {},
   "pagesUsingSizeAdjust": false
 }
