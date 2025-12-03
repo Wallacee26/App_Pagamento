@@ -9,43 +9,27 @@
   },
   "dependencies": {
     "next": "15.5.6",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-icons": "^5.5.0"
-    "aws-sdk": "^2.1692.0",
-    "form-data": "^4.0.5",
-    "fs-extra": "^11.3.2",
-    "mercadopago": "^2.11.0",
-    "next": "15.5.6",
-    "pdfkit": "^0.17.2",
-    "qrcode": "^1.5.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "stripe": "^20.0.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
-  {
-    "name": "app_pagamento",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-      "dev": "node --no-deprecation node_modules/next/dist/bin/next dev --turbopack",
-      "build": "next build --turbopack",
-      "start": "next start"
-    },
-    "dependencies": {
-      "mercadopago": "^2.11.0",
-      "next": "15.5.6",
-      "pdfkit": "^0.17.2",
-      "qrcode": "^1.5.4",
-      "react": "19.1.0",
-      "react-dom": "19.1.0",
-      "stripe": "^20.0.0"
-    },
-    "devDependencies": {
-      "@tailwindcss/postcss": "^4",
-      "tailwindcss": "^4"
+    {
+      "name": "app_pagamento",
+      "version": "0.1.0",
+      "private": true,
+      "scripts": {
+        "dev": "node --no-deprecation node_modules/next/dist/bin/next dev --turbopack",
+        "build": "next build --turbopack",
+        "start": "next start"
+      },
+      "dependencies": {
+        "mercadopago": "^2.11.0",
+        "next": "15.5.6",
+        "pdfkit": "^0.17.2",
+        "qrcode": "^1.5.4",
+        "react": "19.1.0",
+        "react-dom": "19.1.0",
+        "stripe": "^20.0.0"
+      },
+      "devDependencies": {
+        "@tailwindcss/postcss": "^4",
+        "tailwindcss": "^4"
+      }
     }
-  }
+      "build": "next build --turbopack",
