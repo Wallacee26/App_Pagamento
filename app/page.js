@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BsPhone } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -7,7 +8,19 @@ export default function Home() {
       <h1 className="text-3xl text-green-400">API Pix Playground</h1>
 
       <div className="w-[400px] h-[500px] bg-gray-950 rounded-2xl">
-        <div className="ml-10 space-y-10 mt-30">
+        <div className="ml-10 space-y-10 mt-10">
+
+          <div className="flex space-x-4  ">
+            <BsPhone size={50} className=" rounded-xl bg-green-950 text-green-400 p-2" />
+            <div>
+
+          <h1 className="text-xl font-bold">Simulador PIX</h1>
+          <p className="text-sm text-gray-500">Ambiente de Teste API</p>
+            </div>
+          </div>
+
+
+
 
           <div>
           <p className=" text-gray-400 font-mano text-sm font-bold">Nome pessoa</p>
